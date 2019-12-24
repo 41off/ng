@@ -1470,7 +1470,7 @@ $("#negative3").click(function() { // button function for rewind
       
             if (btn.value == "Latest") {
               btn.value = "Latest";
-              btn.innerHTML = "Latest Clip";
+              btn.innerHTML = '<button id="modtext">Latest Clip</button>';
               timer.reset();
               video_player.play();
               timer.start(10);
@@ -1478,7 +1478,7 @@ $("#negative3").click(function() { // button function for rewind
               }
             else {
               btn.value = "Latest";
-              btn.innerHTML = "Start" + "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8690";
+              btn.innerHTML = '<button id="modtext">Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8690</button>';
               timer.stop();
               video_player.pause();
               }
