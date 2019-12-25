@@ -110,11 +110,12 @@ body {
 .timerbar {
     position: absolute;
     display: block;
-    left:10%;
-    right: 10%;
+    padding-top:3px;
+    left:6%;
+    right: 6%;
     top: 3.5%;
     height: 37px;
-    width:80%;
+    width:88%;
     opacity: .25;
     transition: opacity 30s;
     background-color: transparent;
@@ -921,6 +922,65 @@ body {
     color: yellow;
 }
 
+.closebtn2 .closebox {
+  visibility: hidden;
+  width: 180px;
+  height:35x;
+  background-color: black;
+  border-color: silver;
+  color: white;
+  font-size: 18px;
+  text-decoration:blink;
+  font-weight:normal;
+  text-align: center;
+  margin-left:5px;
+  display: inline-flex;
+  align-items: center;
+  border-width:2px;
+  border-style:inset;
+  border-radius: 6px;
+  line-height: 100%;
+  /* Position the tooltip */
+  position: absolute;
+  top: 105%;
+  right: 25%;
+  
+}
+
+.closebtn2:hover .closebox {
+  visibility: visible;
+}
+
+.closebtn2 .closeboxleft {
+  visibility: hidden;
+  width: 180px;
+  height:35x;
+  background-color: black;
+  border-color: silver;
+  color: white;
+  font-size: 18px;
+  text-decoration:blink;
+  font-weight:normal;
+  text-align: center;
+  margin-left:5px;
+  display: inline-flex;
+  align-items: center;
+  border-width:2px;
+  border-style:inset;
+  border-radius: 6px;
+  line-height: 100%;
+  /* Position the tooltip */
+  position: absolute;
+  top: 105%;
+  left: 25%;
+  
+}
+
+.closebtn2:hover .closeboxleft {
+  visibility: visible;
+}
+
+
 ul li{float: left;
       width: 100%;  /*helps to determine number of columns, for instance 33.3% displays 3 columns*/
 }
@@ -956,7 +1016,7 @@ ul{list-style-type: disc; color:red
       
 
          <div class="timerbar" style="text-align:center">
-           <span class="closebtn2">&#11097;</span>
+           <span class="closebtn2">&#11097;<span class="closebox">Click&nbsp;&#11097;&nbsp;to close this element.</span></span>
             <button class="timerbutton" id="timerbuttonreset" onClick="multiReset()">Reset</button> 
             <button id="timerbutton5" class="timerbutton" onClick="multiStart()" value="Play">Toggle Play/Pause<span class="tbtext">This Video Player seems to function better with Chrome browser.</span></button>
             <button class="timerbutton" id="timerbutt1_8" onClick="multiSlow()" value="+1/8X">+1/8X<span class="tbtext">&nbsp;Click twice to initiate.</span></button>
@@ -974,19 +1034,20 @@ ul{list-style-type: disc; color:red
                
          <div class="timer">
              <span class="minute">00</span>:<span class="second">00</span>.<span class="milli">00</span>
-             <span class="closebtn2">&#11097;</span>
+             <span class="closebtn2">&#11097;<div><span class="closebox">Click&nbsp;&#11097;&nbsp;to close this element.</span></div></span>
+             
           </div>
    
-        <div class="controls"><span class="closebtn2">&#11097;</span> 
-          </div> 
+        <div class="controls"><span class="closebtn2">&#11097;<span class="closeboxleft">Click&nbsp;&#11097;&nbsp;to close this element.</span></span>
+           </div> 
    
      
-     <div id="modal"><span class="closebtn2">&#11097;</span> 
+     <div id="modal">
           </div>    
                  
                             
      <div class="playlist" style="text-align:center">
-      <span class="closebtn2">&#11097;</span>
+      <span class="closebtn2">&#11097;<span class="closebox">Click&nbsp;&#11097;&nbsp;to close this element.</span></span>
           <left>Playlist<br></left><br>
             <right>
                <button class="playlistbutton" onclick="on0()"><li>Latest</li></button>
@@ -1050,7 +1111,7 @@ for (i = 0; i < close.length; i++) {
   v.style.top = 0;
 /* If there is a controls element, add the player buttons */
    if(controls){
-    controls.innerHTML =  '<span class="closebtn2">&#11097;</span>'+
+    controls.innerHTML =  '<span class="closebtn2">&#11097;<span class="closeboxleft">Click&nbsp;&#11097;&nbsp;to close this element.</span></span>'+
                           '<br><center>Zoom Controls</center>'+                         
                           '<button class="zoomin">+</button>' +
                           '<button class="zoomout">-</button>' +
@@ -1346,7 +1407,7 @@ a){var b=F.exec(a);b&&(b[1]=(b[1]||"").toLowerCase(),b[3]=b[3]&&new RegExp("(?:^
     timer.mode(0);    
    }
           
-        var video_directory = ["https://player.vimeo.com/external/378042887.hd.mp4?s=5f2c02a5b15e5b6eddeddf4af9c420798947c313&profile_id=175",
+        var video_directory = [["https://player.vimeo.com/external/378042887.hd.mp4?s=5f2c02a5b15e5b6eddeddf4af9c420798947c313&profile_id=175",
                                "https://player.vimeo.com/external/377878635.hd.mp4?s=2e82f1ad3f090b4d9e1ff7c72c4db9bf957ab173&profile_id=175",
                                "https://player.vimeo.com/external/377897006.hd.mp4?s=bbe6f15b77c11e01f3332669df2062d6c854e4af&profile_id=174",
                                "https://player.vimeo.com/external/377897053.hd.mp4?s=a93c9da481fc594717c686d12611ccf8e9a109fd&profile_id=175",
