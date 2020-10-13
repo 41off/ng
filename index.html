@@ -962,7 +962,7 @@ ul{list-style-type: disc; color:red
                <button class="playlistbutton" onclick="on8()"><li>Clip 9</button>
                <button class="playlistbutton" onclick="on9()"><li>Clip 10</button>
                <button class="playlistbutton" onclick="on10()"><li>Clip 11</button>
-               <button class="playlistbutton" onclick="on11()"><li>Clip 12</button>
+               <button class="playlistbutton" onclick="on11()"><li>10-12-2020</button>
                <button class="playlistbutton" href="#" onclick="parent.location='https://sites.google.com/a/41off.com/rcts/media/ng'"><li>HOME</li><span class="plbtext">Click to open this page in Victory Lake.</span></button>
            </left>
            
@@ -1729,16 +1729,16 @@ $("#negative3").click(function() { // button function for rewind
            
            var btn = document.getElementById("modal");
       
-            if (btn.value == "Clip 12") {
+            if (btn.value == "10-12-2020") {
               btn.value = "";
-              btn.innerHTML = '<button id="modtext">Clip 12</button>';              
+              btn.innerHTML = '<button id="modtext">10-12-2020</button>';              
               timer.reset();
               video_player.play();
               timer.start(10);
               timer.mode(1);
               }
             else {
-              btn.value = "Clip 12";
+              btn.value = "10-12-2020";
               btn.innerHTML = '<button id="modtext">Start&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#8690</button>';
               timer.stop();
               video_player.pause();
